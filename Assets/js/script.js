@@ -109,6 +109,23 @@ document.onkeydown = function (e) {
     return false;
   }
 };
+// Smooth scroll for anchor links
+document.querySelectorAll('footer a').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    if (this.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  });
+});
+// Input updateMobileNumber
+function updateMobileNumber() {
+  const countryCode = document.getElementById('country').value;
+  const mobileInput = document.getElementById('mobile');
+  mobileInput.value = countryCode; // Auto-fill country code in the mobile number input
+}
 // Start of Tawk.to Live Chat
 // var Tawk_API = Tawk_API || {},
 //   Tawk_LoadStart = new Date();

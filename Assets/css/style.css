@@ -117,14 +117,13 @@ nav .navbar .links li a {
   text-decoration: none;
   white-space: nowrap;
   color: #fff;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
 }
 .links li:hover .htmlcss-arrow,
 .links li:hover .js-arrow {
   transform: rotate(180deg);
 }
-
 nav .navbar .links li .arrow {
   /* background: red; */
   height: 100%;
@@ -600,4 +599,32 @@ nav .navbar .links li:hover .js-sub-menu {
 }
 .container {
   margin-top: 40px;
+}
+/* Footer */
+footer {
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #00bcd4;
+}
+
+footer .fab {
+  transition: transform 0.3s ease;
+}
+
+footer .fab:hover {
+  transform: scale(1.2);
+}
+
+footer input,
+footer select,
+footer button {
+  box-sizing: border-box;
 }
